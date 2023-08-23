@@ -1,0 +1,15 @@
+{
+    "name": "flashcards/spencer",
+    "description": "A php-orientated flash card system",
+    "type": "project",
+    "license": "no",
+    "authors": [
+        {
+            "name": "skelly-wright",
+            "email": "sak66330@ucmo.edu"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.4"
+    }
+}
