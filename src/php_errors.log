@@ -1,0 +1,12 @@
+[25-Aug-2023 02:24:01 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in C:\Users\waddl\FlashCards\src\data.php:32
+Stack trace:
+#0 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 32
+[25-Aug-2023 02:57:11 UTC] PHP Warning:  Undefined array key 1 in C:\Users\waddl\FlashCards\src\data.php on line 55
+[25-Aug-2023 02:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\waddl\FlashCards\src\data.php on line 55
+[25-Aug-2023 02:58:15 UTC] PHP Warning:  Trying to access array offset on value of type int in C:\Users\waddl\FlashCards\src\data.php on line 56
+[25-Aug-2023 02:58:15 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\waddl\FlashCards\src\data.php:56
+Stack trace:
+#0 C:\Users\waddl\FlashCards\src\data.php(89): get_card(1, 1)
+#1 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 56
