@@ -10,3 +10,17 @@ Stack trace:
 #0 C:\Users\waddl\FlashCards\src\data.php(89): get_card(1, 1)
 #1 {main}
   thrown in C:\Users\waddl\FlashCards\src\data.php on line 56
+[31-Aug-2023 20:57:47 UTC] PHP Warning:  Array to string conversion in C:\Users\waddl\FlashCards\src\data.php on line 91
+[31-Aug-2023 21:01:35 UTC] PHP Warning:  Undefined array key 3 in C:\Users\waddl\FlashCards\src\data.php on line 93
+[31-Aug-2023 21:01:59 UTC] PHP Warning:  Undefined array key 2 in C:\Users\waddl\FlashCards\src\data.php on line 93
+[31-Aug-2023 21:04:17 UTC] PHP Warning:  Undefined array key 3 in C:\Users\waddl\FlashCards\src\data.php on line 94
+[01-Sep-2023 00:15:57 UTC] PHP Parse error:  syntax error, unexpected token "-=" in C:\Users\waddl\FlashCards\src\data.php on line 95
+[01-Sep-2023 00:16:38 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: array - int in C:\Users\waddl\FlashCards\src\data.php:95
+Stack trace:
+#0 C:\Users\waddl\FlashCards\src\data.php(117): delete_card(1, 1)
+#1 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 95
+[01-Sep-2023 00:18:51 UTC] PHP Warning:  Array to string conversion in C:\Users\waddl\FlashCards\src\data.php on line 95
+[01-Sep-2023 00:18:51 UTC] PHP Warning:  Array to string conversion in C:\Users\waddl\FlashCards\src\data.php on line 95
+[01-Sep-2023 00:28:05 UTC] PHP Warning:  Undefined array key 2 in C:\Users\waddl\FlashCards\src\data.php on line 95
+[01-Sep-2023 00:28:05 UTC] PHP Warning:  Undefined array key 3 in C:\Users\waddl\FlashCards\src\data.php on line 95
