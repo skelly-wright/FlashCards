@@ -118,4 +118,6 @@ echo get_card(1,3) . ": New card edited.\n";
 
 delete_card(1,1);
 echo get_card(1,1) . ": First card of first set deleted. Second card becomes first card.\n";
+
+"Hi there. I'm a little test"
 ?>
