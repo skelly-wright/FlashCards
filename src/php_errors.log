@@ -24,3 +24,7 @@ Stack trace:
 [01-Sep-2023 00:18:51 UTC] PHP Warning:  Array to string conversion in C:\Users\waddl\FlashCards\src\data.php on line 95
 [01-Sep-2023 00:28:05 UTC] PHP Warning:  Undefined array key 2 in C:\Users\waddl\FlashCards\src\data.php on line 95
 [01-Sep-2023 00:28:05 UTC] PHP Warning:  Undefined array key 3 in C:\Users\waddl\FlashCards\src\data.php on line 95
+[08-Sep-2023 02:14:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function querySingle() in C:\Users\waddl\FlashCards\src\version.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\Users\waddl\FlashCards\src\version.php on line 5

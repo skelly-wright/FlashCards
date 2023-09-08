@@ -32,15 +32,18 @@ $cardsets = [
 
 function post_card(Int $cardSetID, String $content)
 {
-    global $cardsets;
-    $cardSetID -= 1;
-    $ID = count($cardsets[$cardSetID]["cards"]) + 1;
-    array_push($cardsets[$cardSetID]["cards"],
-        [
-            "ID"=>$ID,
-            "header"=>$content
-        ]
-    );
+    $db = new SQLite3('FlashCardsDB.db');
+    $db->exec("INSERT INTO Cards(CardsetID, Header) VALUES(1, 'Addition')");
+    
+    // global $cardsets;
+    // $cardSetID -= 1;
+    // $ID = count($cardsets[$cardSetID]["cards"]) + 1;
+    // array_push($cardsets[$cardSetID]["cards"],
+    //     [
+    //         "ID"=>$ID,
+    //         "header"=>$content
+    //     ]
+    // );
 }
 
 function post_cardSet($ID)
@@ -105,7 +108,7 @@ function delete_card($cardSetID, $cardID)
 
 function delete_cardSet($ID)
 {
-
+    
 }
 
 echo get_card(1,1) . ": First card of first set.\n";
