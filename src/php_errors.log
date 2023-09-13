@@ -28,3 +28,27 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\waddl\FlashCards\src\version.php on line 5
+[13-Sep-2023 01:25:59 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such table: cardsets in C:\Users\waddl\FlashCards\src\data.php on line 79
+[13-Sep-2023 01:25:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetchArray() on bool in C:\Users\waddl\FlashCards\src\data.php:81
+Stack trace:
+#0 C:\Users\waddl\FlashCards\src\data.php(127): get_cardSet(1)
+#1 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 81
+[13-Sep-2023 01:26:20 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such table: Cardsets in C:\Users\waddl\FlashCards\src\data.php on line 79
+[13-Sep-2023 01:26:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetchArray() on bool in C:\Users\waddl\FlashCards\src\data.php:81
+Stack trace:
+#0 C:\Users\waddl\FlashCards\src\data.php(127): get_cardSet(1)
+#1 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 81
+[13-Sep-2023 01:31:59 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such table: Cardsets in C:\Users\waddl\FlashCards\src\data.php on line 79
+[13-Sep-2023 01:39:40 UTC] PHP Warning:  SQLite3::query(): Unable to prepare statement: 26, file is not a database in C:\Users\waddl\FlashCards\src\data.php on line 79
+[13-Sep-2023 01:39:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetchArray() on bool in C:\Users\waddl\FlashCards\src\data.php:81
+Stack trace:
+#0 C:\Users\waddl\FlashCards\src\data.php(127): get_cardSet(1)
+#1 {main}
+  thrown in C:\Users\waddl\FlashCards\src\data.php on line 81
+[13-Sep-2023 02:44:33 UTC] PHP Parse error:  syntax error, unexpected variable "$db" in C:\Users\waddl\FlashCards\src\data.php on line 40
+[13-Sep-2023 02:57:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\waddl\FlashCards\src\data.php on line 86
+[13-Sep-2023 02:57:12 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\waddl\FlashCards\src\data.php on line 86
+[13-Sep-2023 02:58:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\waddl\FlashCards\src\data.php on line 87
+[13-Sep-2023 02:58:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\waddl\FlashCards\src\data.php on line 87

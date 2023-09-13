@@ -30,11 +30,15 @@ $cardsets = [
     ]
 ];
 
-function post_card(Int $cardSetID, String $content)
+function post_card(Int $cardSetID, String $front = "", String $back = "")
 {
     $db = new SQLite3('FlashCardsDB.db');
-    $db->exec("INSERT INTO Cards(CardsetID, Header) VALUES(1, 'Addition')");
-    
+
+    $header = explode("\n", $front)[0];
+    // $ID = get
+
+    $db->exec("INSERT INTO Cards(Header, Front, Back, ID, CardsetID) VALUES(".$header.",".$front.",".$back.",".$ID.",".$cardSetID.")");
+
     // global $cardsets;
     // $cardSetID -= 1;
     // $ID = count($cardsets[$cardSetID]["cards"]) + 1;
@@ -52,22 +56,41 @@ function post_cardSet($ID)
 }
 function get_card($cardSetID, $cardID)
 {
-    global $cardsets;
-	foreach($cardsets as $cardset)
-	{
-		if($cardset["ID"]==$cardSetID) { 
-            foreach($cardset["cards"] as $card) {
-                if($card["ID"]==$cardID) {
-                    return $card["header"];
-                }
-            }
-        }
-	}
+    $db = new SQLite3('FlashCardsDB.db');
+    $db->exec("INSERT INTO Cards(CardsetID, Header) VALUES(1, 'Addition')");
+    $res = $db->query('SELECT * FROM cars');
+
+    while ($row = $res->fetchArray()) {
+        echo "{$row['id']} {$row['name']} {$row['price']} \n";
+    }
+
+    // global $cardsets;
+	// foreach($cardsets as $cardset)
+	// {
+	// 	if($cardset["ID"]==$cardSetID) { 
+    //         foreach($cardset["cards"] as $card) {
+    //             if($card["ID"]==$cardID) {
+    //                 return $card["header"];
+    //             }
+    //         }
+    //     }
+	// }
 }
 
 function get_cardSet($ID)
 {
+    $db = new SQLite3('FlashCardsDB.db');
+    $res = $db->query('SELECT * FROM Cardsets WHERE ID=' . $ID);
 
+    if ($row = $res->fetchArray() == false) echo "hi there";
+    else {
+        $res = $db->query('SELECT * FROM Cardsets WHERE ID=' . $ID);
+        while ($row = $res->fetchArray()) {
+            echo "{$row['ID']} {$row['Title']} \n";
+        }
+    }
+
+    
 }
 
 function put_card(Int $cardSetID, Int $cardID, String $content)
@@ -111,14 +134,15 @@ function delete_cardSet($ID)
     
 }
 
-echo get_card(1,1) . ": First card of first set.\n";
+get_cardSet(2);
+// echo get_card(1,1) . ": First card of first set.\n";
 
-post_card(1, "Addition Card");
-echo get_card(1,3) . ": New card for first set.\n";
+// post_card(1, "Addition Card");
+// echo get_card(1,3) . ": New card for first set.\n";
 
-put_card(1,3,"Subtraction Card");
-echo get_card(1,3) . ": New card edited.\n";
+// put_card(1,3,"Subtraction Card");
+// echo get_card(1,3) . ": New card edited.\n";
 
-delete_card(1,1);
-echo get_card(1,1) . ": First card of first set deleted. Second card becomes first card.\n";
+// delete_card(1,1);
+// echo get_card(1,1) . ": First card of first set deleted. Second card becomes first card.\n";
 ?>
